@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>치지직 라디오 설정</title>
+<link rel="stylesheet" href="style.css">
+<main class="options">
+  <header class="top">
+    <img src="icon-48.png" alt="" width="28" height="28">
+    <h1>치지직 라디오</h1>
+    <div class="toast">
+      <span id="saved" role="status"></span>
+      <button id="undo" class="link" hidden>되돌리기</button>
+    </div>
+  </header>
+
+  <section id="app" class="card">
+    <div class="head">
+      <img id="img" class="avatar off" alt="">
+      <div class="who">
+        <span id="name" class="name">채널을 골라 주세요</span>
+        <div class="meta">
+          <span id="badge" class="badge"></span>
+          <button id="listen" class="listen" aria-pressed="false" disabled>
+            <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>듣기
+          </button>
+        </div>
+      </div>
+    </div>
+    <button id="login" class="soft" hidden>네이버에 로그인</button>
+    <button id="claim" class="soft" hidden></button>
+    <div id="buttons" class="chats"></div>
+    <p id="msg" role="status"></p>
+  </section>
+
+  <section class="section" aria-labelledby="h-channel">
+    <h2 id="h-channel">채널</h2>
+    <div id="picker" class="picker">
+      <input class="search" type="search" placeholder="팔로잉 채널 검색" aria-label="팔로잉 채널 검색">
+      <ul class="follows" aria-label="팔로잉 채널"></ul>
+      <p class="hint" hidden></p>
+    </div>
+    <div class="field">
+      <label for="channel">채널 주소로 고르기</label>
+      <input id="channel" placeholder="https://chzzk.naver.com/…" aria-describedby="channelError">
+      <p id="channelError" class="field-error" hidden></p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-notify">
+    <h2 id="h-notify">알림</h2>
+    <label class="switch-row">
+      <span>방송이 시작되면 알림 받기</span>
+      <input id="notify" type="checkbox" role="switch">
+    </label>
+  </section>
+
+  <section class="section" aria-labelledby="h-chat">
+    <h2 id="h-chat">채팅 버튼</h2>
+    <p class="hint">보낼 내용을 비워 두면 버튼 이름을 그대로 보내요. 이모티콘은 <code>{:이모티콘ID:}</code> 형식으로 넣으세요.</p>
+    <div class="chip-head" aria-hidden="true"><span>버튼 이름</span><span>보낼 내용</span></div>
+    <div id="rows"></div>
+    <button id="add" class="ghost">버튼 추가</button>
+  </section>
+
+  <template id="xIcon">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </template>
+</main>
+<script src="card.js"></script>
+<script src="picker.js"></script>
+<script src="panel.js"></script>
+</html>

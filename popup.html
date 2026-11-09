@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>치지직 라디오</title>
+<link rel="stylesheet" href="style.css">
+<body class="popup">
+  <section id="app">
+    <div class="head">
+      <img id="img" class="avatar off" alt="">
+      <div class="who">
+        <span id="name" class="name">채널을 골라 주세요</span>
+        <div class="meta">
+          <span id="badge" class="badge"></span>
+          <button id="listen" class="listen" aria-pressed="false" disabled>
+            <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>듣기
+          </button>
+        </div>
+      </div>
+      <button id="switch" class="icon" aria-label="채널 바꾸기" aria-expanded="false" aria-controls="picker">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M7 4 3 8l4 4"/><path d="M3 8h14"/><path d="m17 20 4-4-4-4"/><path d="M21 16H7"/>
+        </svg>
+      </button>
+      <button id="settings" class="icon" aria-label="설정">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/>
+        </svg>
+      </button>
+    </div>
+    <div id="picker" class="picker" hidden>
+      <input class="search" type="search" placeholder="팔로잉 채널 검색" aria-label="팔로잉 채널 검색">
+      <ul class="follows" aria-label="팔로잉 채널"></ul>
+      <p class="hint" hidden></p>
+    </div>
+    <button id="login" class="soft" hidden>네이버에 로그인</button>
+    <button id="claim" class="soft" hidden></button>
+    <div id="buttons" class="chats"></div>
+    <p id="msg" role="status"></p>
+  </section>
+  <script src="card.js"></script>
+  <script src="picker.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "치지직 라디오 (비공식)",
+  "version": "0.1.0",
+  "description": "치지직 방송인의 방송 여부를 아이콘으로 보여 주고, 버튼 한 번으로 채팅·듣기를 할 수 있는 비공식 도구입니다. 치지직·네이버와 관련이 없습니다.",
+  "homepage_url": "https://github.com/GyuPin-Moon/chzzk-radio",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "storage",
+    "alarms",
+    "declarativeNetRequestWithHostAccess",
+    "scripting",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://chzzk.naver.com/*",
+    "https://api.chzzk.naver.com/*",
+    "https://comm-api.game.naver.com/*",
+    "wss://*.chat.naver.com/*",
+    "https://nng-phinf.pstatic.net/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "치지직 라디오",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon-16.png",
+      "32": "icon-32.png"
+    }
+  },
+  "options_ui": {
+    "page": "panel.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "icon-16.png",
+    "32": "icon-32.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  }
+}
