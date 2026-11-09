@@ -209,8 +209,8 @@ async function notifyLive(channelId, name, title, image) {
   if (!notify) return;
   const options = { type: 'basic', title: `${name} 방송 시작`, message: title || '제목 없음' };
   const show = iconUrl => chrome.notifications.create(`live:${channelId}`, { ...options, iconUrl });
-  await show(image || chrome.runtime.getURL('icon-128.png'))
-    .catch(() => show(chrome.runtime.getURL('icon-128.png')))
+  await show(image || chrome.runtime.getURL('icons/icon-128.png'))
+    .catch(() => show(chrome.runtime.getURL('icons/icon-128.png')))
     .catch(e => console.warn('notify', e));
 }
 
